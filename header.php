@@ -18,14 +18,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-						<a class="logo" href="index.html">Labb 1</a>
+						<a class="logo" href="http://localhost/henriks/assingment_01/wordpress/">Labb 1</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
 						<form id="searchform" class="searchform">
 							<div>
-								<label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" />
+							<?php get_search_form(); ?>
 							</div>
 						</form>
 					</div>
@@ -42,11 +40,7 @@
         
 		<div class="mobile-search">
 			<form id="searchform" class="searchform">
-				<div>
-					<label class="screen-reader-text">Sök efter:</label>
-					<input type="text" />
-					<input type="submit" value="Sök" />
-				</div>
+			<?php get_search_form(); ?>
 			</form>
 		</div>
 
@@ -55,7 +49,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => 'ul', 'menu_class' => 'menu' ) ); ?>
+                    <?php wp_nav_menu( array( 'Navigation', 'container' => 'ul', 'menu_class' => 'menu' ) ); ?>
 					</div>
 				</div>
 			</div>
