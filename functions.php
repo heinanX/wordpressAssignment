@@ -56,13 +56,16 @@ register_sidebar( [
 register_sidebar( [
   'name' => 'sidebarWidget',
   'description' => 'sidebar widget',
-  'id' => 'sidebar'
+  'id' => 'sidebar',
+  'before_widget' => '<li>',
+  'after_widget'  => '</li>'
 ]);
 // footer widget area
 register_sidebar( [
   'name' => 'footerWidget',
   'description' => 'footer widget',
-  'id' => 'footer'
+  'id' => 'footer',
+  'before_widget' => ''
 ]);
 
 // sets get_the_archive_title to 'Archive: Month Year'
@@ -73,6 +76,7 @@ add_filter( 'get_the_archive_title', function ( $title ) {
   }
   return $title;
 });
+
 
 ?>
 
