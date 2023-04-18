@@ -45,10 +45,12 @@
                         <ul>
                             <li>
                                 <form id="searchform" class="searchform">
-                                    
-                                    <?php //dynamic_sidebar('searchbar') ?>
+                                    <div>
+
                                     <?php get_search_form(); ?>
 
+                                    </div>
+                                    
                                 </form>
                             </li>
                         </ul>
