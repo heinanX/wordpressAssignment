@@ -10,17 +10,11 @@
                         <h1>
                             <?php the_title(); ?>
                         </h1>
+                        <?php the_content(); ?>
+
                         
                     <?php endwhile; ?>
-                    <form>
-                        <label>Name</label>
-                        <input type="text" />
-                        <label>E-mail</label>
-                        <input type="email" />
-                        <label>Messsage</label>
-                        <textarea></textarea>
-                        <input type="submit" value="Skicka" />
-                    </form>
+                    <?php  ?>
                 </div>
             </div>
         </div>
