@@ -1,4 +1,4 @@
-<?php get_header();  ?>
+<?php get_header(); ?> <!-- Include header.php file -->
 
 <main>
     <section>
@@ -8,8 +8,8 @@
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="col-xs-12">
 
-                        <h1><?php the_title(); ?></h1>
-                        <p><?php the_content(); ?></p>
+                        <h1><?php the_title(); ?></h1> <!-- Display the post title -->
+                        <p><?php the_content(); ?></p> <!-- Display the post content -->
 
                     </div>
                 <?php endwhile; ?>
@@ -19,7 +19,7 @@
     </section>
 </main>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?> <!-- Include footer.php file -->
 
 </body>
 </html>

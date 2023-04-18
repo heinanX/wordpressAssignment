@@ -1,17 +1,16 @@
 <?php 
-// Lägg till stöd för utvalda bilder
+// add supports to thumbnails and widgets
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'widgets' );
 
-// Lägg till stöd för menyer
-/* add_theme_support( 'menus' ); */
+// add supports to menu
 add_action('after_setup_theme', 'register_my_menus');
 add_action('after_setup_theme', 'my_theme_setup');
 add_action('wp_enqueue_scripts', 'my_scripts');
 
-
+/* Function that adds the script files and css files */
 function my_scripts() {
-  // Ladda din script.js-fil som beroende på jQuery
+  // Loads script.js-file that's dependant on jQuery
   wp_enqueue_script('custom-script', get_template_directory_uri() . '/labb1-filer/js/script.js', array('jquery'), '1.0.0', true);
 
   wp_register_style('style', get_template_directory_uri(). '/labb1-filer/css/style.css');
@@ -29,7 +28,7 @@ function my_scripts() {
   wp_enqueue_script('jquery');
 }
 
-
+/* registers my menus */
 function register_my_menus() {
   register_nav_menus(
     array(
@@ -48,9 +47,10 @@ function my_theme_setup() {
 
 // sidebar search widget area
 register_sidebar( [
-  'name' => 'searchWidget',
-  'description' => 'search widget',
-  'id' => 'searchbar'
+  'name' => 'copyrightWidget',
+  'description' => 'copyright widget',
+  'id' => 'copyright',
+  'before_widget' => ''
 ]);
 // sidebar widget area
 register_sidebar( [
